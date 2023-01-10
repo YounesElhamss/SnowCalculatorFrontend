@@ -1,0 +1,198 @@
+#container {
+  margin-left: 35%;
+  margin-right: 35%;
+  border-style: solid;
+  border-color: white;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+}
+
+#FujitsuLabel {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+#h5label {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: darkred;
+}
+
+/* all the labels*/
+#label {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: black;
+  text-align: left;
+}
+
+/* all the input fields*/
+#formDiv {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#resultDiv {
+  margin-left: 5%;
+}
+
+/* the final result text*/
+#resultText {
+  margin-top: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: black;
+}
+
+input, select {
+  width: 100%;
+}
+
+/* the Add license button */
+#addlicensebtn {
+  font-family: sans-serif;
+  font-size: 12px;
+  margin-left: 5%;
+}
+
+
+/* the Calculate button */
+#submitBtn {
+  margin-left: 35%;
+  margin-right: 35%;
+  justify-content: center;
+  appearance: none;
+  background-color: darkred; /*#2ea44f;*/
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+#submitBtn:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+#submitBtn:hover {
+  background-color: #de1b1b; /*#2c974b*/;
+}
+
+#submitBtn:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+#submitBtn:disabled {
+  background-color: #dc6565;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+#submitBtn:active {
+  background-color: #fa0101;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+/* side nav */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 200px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: darkred; /*rgb(37, 36, 36);  Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px;  /*Place content 60px from the top*/
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* the sidebar links */
+.sidebar__link {
+  margin-top: 20px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  align-items: center;
+  padding: 12px;
+  background: #ad0505; /*rgb(40, 40, 40);*/
+  /*border-bottom: 0.6px solid rgb(39, 38, 38);*/
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgb(240, 234, 234);
+  display: flex;
+  transition: 0.3s;
+}
+
+.sidebar__link .material-icons {
+  margin-right: 12px;
+  font-size: 2rem;
+  color: rgb(147, 147, 147);
+}
+
+.sidebar__link:active {
+  background: rgb(14, 13, 13);
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  color: white;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 30px;
+  cursor: pointer;
+  background-color: rgba(55, 61, 182, 0);
+  color: rgb(235, 236, 243);
+  margin-left: 0px;
+  padding-left: 0px;
+  border: none;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+  transition: margin-left .2ms; /* If you want a transition effect */
+  padding: 20px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+

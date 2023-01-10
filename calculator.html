@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <script src="js/calculatePrice.js" defer></script>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/sideNav.js" defer></script>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <p id="FujitsuLabel">Fujitsu</p>
+
+  <a href="" class="sidebar__link"> <!--indsæt html side link-->
+    <span class=""></span>Calculator</a> <!--man kan putte logo in i class="", download fra nettet-->
+
+  <a href="contract.html" class="sidebar__link">
+    <span class=""></span>Contract</a>
+</div>
+<div id="main">
+  <button class="openbtn" id="openbtn" onclick="openNav()">&#9776;</button>
+</div>
+
+<!-- The main content -->
+<div id="container">
+  <form id="form">
+    <div id="formDiv" class="formDiv">
+      <h5 id="h5label">ServiceNow License Calculator</h5>
+      <!-- "Choose a license" label and dropdown with options -->
+      <label id="label" for="licenses">Choose a license: </label><br>
+      <select id="licenses" class="licenses">
+        <option id="option0" value=""></option>
+        <option id="option1" value="100">License 1</option>
+        <option id="option2" value="200">License 2</option>
+        <option id="option3" value="300">License 3</option>
+      </select>
+
+      <br><br>
+
+      <!-- Amount label-->
+      <label id="label" for="counter">Amount: </label><br>
+      <input id="counter" class="counter" type="number">
+    </div>
+
+    <div id="break">
+      <p></p>
+    </div>
+
+    <br>
+    <!-- Add license button-->
+    <div>
+      <button id="addlicensebtn">+ Add license</button>
+    </div>
+
+    <br>
+
+    <!-- Calculate button-->
+    <div>
+      <button id="submitBtn" onclick="getTotal()">Calculate</button>
+    </div>
+
+    <!-- The "Total price" text, through getTotal() -->
+
+    <div id="resultDiv">
+      <label id="label" for="resultText">Total:</label>
+      <p id="resultText"></p>
+    </div>
+
+  </form>
+</div>
+</body>
+</html>

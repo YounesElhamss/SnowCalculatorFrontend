@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contract</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/sideNav.js" defer></script>
+  <script src="js/generateContract.js" defer></script>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <p id="FujitsuLabel">Fujitsu</p>
+
+  <a href="calculator.html" class="sidebar__link"> <!--indsæt html side link-->
+    <span class=""></span>Calculator</a> <!--man kan putte logo in i class="", download fra nettet-->
+
+  <a href="contract.html" class="sidebar__link">
+    <span class=""></span>Contract</a>
+</div>
+<div id="main">
+  <button class="openbtn" id="openbtn" onclick="openNav()">&#9776;</button>
+</div>
+
+<!-- The main content-->
+<div id="container">
+  <form id="form">
+    <div id="formDiv" class="formDiv">
+      <h5 style="margin-left: 5%" id="h5label">Generate a contract</h5> <!--skal laves i css når jeg har fundet ud af html strukturen her-->
+
+
+      <a id="a1" download="Contract.doc">Download contract</a>
+
+      <!--
+      <div>
+      <button id="submitBtn">Generate contract</button>
+
+      </div>
+      -->
+   </div>
+  </form>
+
+
+</div>
+
+</body>
+</html>
