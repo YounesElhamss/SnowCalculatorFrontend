@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+  <title>Backoffice</title>
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/postLicense.js" defer></script>
+  <script src="js/loadLicenses.js" defer></script>
+  <script src="js/editLicense.js" defer></script>
+  <script src="js/deleteLicense.js" defer></script>
+  <script src="js/createLicense.js" defer></script>
+  <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"
+          defer></script>
+</head>
+<body>
+
+<!-- Top nav -->
+<div class="topnav">
+  <a class="active" href=""></a>
+
+</div>
+
+
+<!-- SIDE BAR -->
+<div id="mySidebar" class="sidebar">
+  <div id="FujitsuLabel">
+    <h3>Fujitsu</h3>
+  </div>
+  <div id="search-bar-div">
+    <label for="search-bar"></label>
+    <input id="search-bar" placeholder="Search..." type="search"></span>
+  </div>
+  <a href="calculator.html" class="sidebar__link">
+    <span class="las la-dollar-sign"></span><span>Calculate</span></a>
+
+  <a href="backoffice.html" class="sidebar__link">
+    <span class="las la-edit"></span><span>Admin</span></a>
+</div>
+
+<!--SHOW LICENSES-->
+<div class="main-content">
+
+  <table class="table table-striped">
+    <thead id="table-header">
+    <tr>
+      <th id="id-row">ID</th>
+      <th id="license-row">License</th>
+      <th id="price-row">Price (kr)</th>
+      <th id="edit-row">Control</th>
+    </tr>
+    </thead>
+    <tbody id="table-body">
+
+    </tbody>
+  </table>
+
+  <br><br>
+
+  <!-- FORM -->
+  <div class="container">
+  </div>
+
+  <div style="margin-bottom: 5px; margin-top: 5px">
+    <button class="submitBtn" id="create-license-btn">Create License</button>
+  </div>
+
+  <!-- The Create Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="formDiv">
+          <form class="form">
+            <h2 class="h5label">Create License</h2>
+            <label class="label" id="label" for="licenseName">License Name:</label>
+            <br>
+            <input id="licenseName" type="text">
+            <br><br>
+            <label class="label" for="price">Price:</label>
+            <br>
+            <input class="counter" id="price" type="number">
+
+            <br><br>
+
+            <button class="submitBtn" type="submit" onclick="postLicense()" id="post-license-btn">Create License
+            </button>
+            <br><br>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit modal -->
+  <div id="myEditModal" class="modal">
+
+  </div>
+</body>
+</html>

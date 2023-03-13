@@ -1,0 +1,15 @@
+{
+  "ITSM": [
+    {"name": "ITSM License 1", "price":  100},
+    {"name": "ITSM License 2", "price": 200},
+    {"name": "ITSM License 3", "price":  300}
+    ],
+  "ITOM": [
+    {"name":  "ITOM License 1", "price": 100},
+    {"name": "ITOM License 2", "price": 200}
+  ],
+  "HR": [
+    {"name": "HR License 1", "price": 100},
+    {"name": "HR License 2", "price": 200}
+  ]
+}

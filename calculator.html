@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
   <title>Calculator</title>
   <script src="js/calculatePrice.js" defer></script>
   <link rel="stylesheet" href="css/main.css">
-  <script src="js/sideNav.js" defer></script>
+  <script src="js/addLicenseForm.js" defer></script>
+  <script src="js/fetchLicenses.js" defer></script>
+  <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"
+          defer></script>
 </head>
-<body>
+<body onload="fillLicenses(event)">
 
+<!-- Top nav -->
+<nav class="topnav">
+  <a class="active" href=""></a>
+
+</nav>
+
+
+<!-- SIDE BAR -->
 <div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="FujitsuLabel">
+    <h3>Fujitsu</h3>
+  </div>
 
-  <p id="FujitsuLabel">Fujitsu</p>
+  <div id="search-bar-div">
+    <label for="search-bar"></label>
+    <input id="search-bar" placeholder="Search..." type="search">
+  </div>
 
-  <a href="" class="sidebar__link"> <!--indsæt html side link-->
-    <span class=""></span>Calculator</a> <!--man kan putte logo in i class="", download fra nettet-->
+  <a href="calculator.html" class="sidebar__link">
+    <span class="las la-dollar-sign"></span><span>Calculate</span></a>
 
-  <a href="contract.html" class="sidebar__link">
-    <span class=""></span>Contract</a>
+  <a href="backoffice.html" class="sidebar__link">
+    <span class="las la-edit"></span><span>Admin</span></a>
 </div>
-<div id="main">
-  <button class="openbtn" id="openbtn" onclick="openNav()">&#9776;</button>
-</div>
 
-<!-- The main content -->
-<div id="container">
-  <form id="form">
-    <div id="formDiv" class="formDiv">
-      <h5 id="h5label">ServiceNow License Calculator</h5>
-      <!-- "Choose a license" label and dropdown with options -->
-      <label id="label" for="licenses">Choose a license: </label><br>
-      <select id="licenses" class="licenses">
-        <option id="option0" value=""></option>
-        <option id="option1" value="100">License 1</option>
-        <option id="option2" value="200">License 2</option>
-        <option id="option3" value="300">License 3</option>
-      </select>
 
-      <br><br>
-
-      <!-- Amount label-->
-      <label id="label" for="counter">Amount: </label><br>
-      <input id="counter" class="counter" type="number">
+<!-- MAIN CONTENT -->
+<div class="main-content">
+  <div id="form-layout">
+  <div class="formDiv">
+      <form class="form">
+        <h2 class="h5label">ServiceNow License Calculator</h2>
+        <label class="label" id="label" for="licenses">Choose a license: </label>
+        <br>
+        <select id="licenses" class="licenses"></select>
+        <br><br>
+        <label class="label" id="label" for="counter">Amount: </label
+        ><br>
+        <input id="counter" class="counter" type="number">
+      </form>
     </div>
 
     <div id="break">
@@ -51,25 +67,23 @@
 
     <br>
     <!-- Add license button-->
-    <div>
-      <button id="addlicensebtn">+ Add license</button>
+    <div id="buttonsdiv">
+      <div>
+        <button id="addlicensebtn">+ Add license</button>
+      </div>
+      <br>
+      <!-- Calculate button-->
+      <div id="calculate-btn-div">
+        <button onclick="getTotal(event)" id="calculate-btn" class="submitBtn">Calculate</button>
+      </div>
+      <br>
+      <!-- The "Total price" text, through getTotal() -->
+      <div id="resultDiv">
+        <label class="label" for="resultText">Total:</label>
+        <p id="resultText"></p>
+      </div>
     </div>
-
-    <br>
-
-    <!-- Calculate button-->
-    <div>
-      <button id="submitBtn" onclick="getTotal()">Calculate</button>
-    </div>
-
-    <!-- The "Total price" text, through getTotal() -->
-
-    <div id="resultDiv">
-      <label id="label" for="resultText">Total:</label>
-      <p id="resultText"></p>
-    </div>
-
-  </form>
+  </div>
 </div>
 </body>
 </html>

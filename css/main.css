@@ -1,42 +1,62 @@
-#container {
-  margin-left: 35%;
-  margin-right: 35%;
-  border-style: solid;
-  border-color: white;
-  border-radius: 2px;
-  background-color: #f2f2f2;
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: darkred;
+  overflow: hidden;
+  height: 65px;
+  border-bottom-style: solid;
+  border-bottom-color: #d71010;
+  border-bottom-width: 5px;
+}
+
+.license-row {
+  font-family: sans-serif;
 }
 
 #FujitsuLabel {
+  margin-top: 20px;
+
   text-align: center;
   color: white;
   font-size: 20px;
   font-family: sans-serif;
 }
 
-#h5label {
+.h5label {
+
   font-family: sans-serif;
-  font-size: 20px;
   color: darkred;
 }
 
+#buttonsdiv {
+  text-align: center;
+}
+
 /* all the labels*/
-#label {
+.label {
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   color: black;
   text-align: left;
 }
 
-/* all the input fields*/
-#formDiv {
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
+#counter, #licenses, #licenseName, #price, #modal-input-name, #modal-input-price {
+  width: 200px;
 }
 
-#resultDiv {
-  margin-left: 5%;
+/* all the input fields*/
+.formDiv {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#form-layout {
+  margin-top: 2%;
+  background-color: #f1f1f1;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: darkred;
 }
 
 /* the final result text*/
@@ -54,16 +74,14 @@ input, select {
 /* the Add license button */
 #addlicensebtn {
   font-family: sans-serif;
-  font-size: 12px;
-  margin-left: 5%;
+  font-size: 16px;
+  border-radius: 5px;
+  border-color: lightgrey;
 }
 
-
 /* the Calculate button */
-#submitBtn {
-  margin-left: 35%;
-  margin-right: 35%;
-  justify-content: center;
+.submitBtn {
+  height: 50px;
   appearance: none;
   background-color: darkred; /*#2ea44f;*/
   border: 1px solid rgba(27, 31, 35, .15);
@@ -74,7 +92,7 @@ input, select {
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 20px;
   padding: 6px 16px;
@@ -116,46 +134,67 @@ input, select {
 
 /* side nav */
 .sidebar {
+  margin-top: 0;
   height: 100%; /* 100% Full-height */
-  width: 200px; /* 0 width - change this with JavaScript */
+  width: 250px; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: darkred; /*rgb(37, 36, 36);  Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px;  /*Place content 60px from the top*/
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  background-color: #a81919; /*rgb(37, 36, 36);  Black*/
+  overflow: auto; /* Disable horizontal scroll transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+
+  padding: 0;
 }
 
-/* the sidebar links */
-.sidebar__link {
+.sidebar a:hover:not(.active) {
+  background-color: darkred;
+  color: white;
+}
+
+
+.sidebar a {
   margin-top: 20px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   align-items: center;
-  padding: 12px;
-  background: #ad0505; /*rgb(40, 40, 40);*/
-  /*border-bottom: 0.6px solid rgb(39, 38, 38);*/
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 1rem;
   color: rgb(240, 234, 234);
-  display: flex;
   transition: 0.3s;
+  background-color: #c21d1d;
+  display: block;
+  padding: 16px;
+}
+
+.sidebar-content {
+  margin-top: 64px;
+  padding-top: 64px;
+}
+
+.sidebar a.active {
+  background-color: black;
+}
+
+#search-bar-div {
+  /*padding-top: 66px;*/
+  text-align: center;
+}
+
+#search-bar {
+  margin-top: 10px;
+  text-align: left;
+  width: 200px;
+  border: 0;
+  border-radius: 10px;
 }
 
 .sidebar__link .material-icons {
   margin-right: 12px;
+  padding-left: 10px;
   font-size: 2rem;
   color: rgb(147, 147, 147);
 }
 
-.sidebar__link:active {
-  background: rgb(14, 13, 13);
-}
 
 /* Position and style the close button (top right corner) */
 .sidebar .closebtn {
@@ -178,14 +217,42 @@ input, select {
   border: none;
 }
 
+thead {
+  background-color: #a02424;
+  color: #eae6e6;
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-
-#main {
-  transition: margin-left .2ms; /* If you want a transition effect */
-  padding: 20px;
 }
 
+.table {
+  margin-top: -4px;
+
+}
+
+.main-content {
+  margin-left: 247px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 2px;
+  padding-right: 0;
+  }
+
+#edit-row {
+  text-align: center;
+}
+
+.edit {
+  background-color: lightgrey;
+  border-radius: 5px;
+}
+
+.delete {
+  background-color: #dc6565;
+  border-radius: 5px;
+}
+
+#edit-delete-col {
+  text-align: center;
+}
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
@@ -193,6 +260,84 @@ input, select {
   .sidebar a {font-size: 18px;}
 }
 
+#create-license-btn, #post-license-btn, #modal-save-btn {
+  margin-left: 1%;
+  background-color: #5cb85c;
+}
 
+#calculate-btn {
+  background-color: #5cb85c;
+}
 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding: 10%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: darkred;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}

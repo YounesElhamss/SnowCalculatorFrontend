@@ -1,10 +1,13 @@
 {
-  "name": " ",
+  "name": "ServiceowLicenseCalculator",
   "version": "0.0.1",
-  "description": "",
+  "description": "System that can calculate created elements",
   "keywords": "",
   "license": "",
   "author": "",
+  "engines": {
+    "node": "18.13.0"
+  },
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
