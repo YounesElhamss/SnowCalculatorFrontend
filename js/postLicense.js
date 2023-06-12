@@ -1,4 +1,4 @@
-const postLicenseUrl = "http://localhost:8181/api/createlicense"
+const postLicenseUrl = "https://snowcalculatorbackend-production.up.railway.app/api/postlicense"
 
 async function postLicenseRequest(body) {
   const requestOptions = {
