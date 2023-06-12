@@ -1,5 +1,5 @@
 async function deleteRow(id, event) {
-  await fetch("http://localhost:8181/api/deletelicense/" + id, {
+  await fetch("https://snowcalculatorbackend-production.up.railway.app/api/deletelicense/" + id, {
     method: "DELETE",
     headers: {
       "Content-type": "application/json"
