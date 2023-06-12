@@ -1,5 +1,5 @@
 async function fetchAllLicenses() {
-  return await fetch("http://localhost:8181/api/getlicenses").then(response => response.json())
+  return await fetch("https://snowcalculatorbackend-production.up.railway.app/api/getlicenses").then(response => response.json())
 }
 
 mapLicenses();
