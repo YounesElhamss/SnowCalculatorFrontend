@@ -1,4 +1,4 @@
-fetch("http://localhost:8181/api/getlicenses").then((data) => {
+fetch("https://snowcalculatorbackend-production.up.railway.app/api/getlicenses").then((data) => {
     return data.json();
   }).then((objectData) => {
   let tableData = "";
