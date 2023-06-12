@@ -86,7 +86,7 @@ function saveEditLicense(id) {
     "price": document.getElementById("modal-input-price").value
   }
 
-  fetch("http://localhost:8181/api/updatelicense/" + id, {
+  fetch("https://snowcalculatorbackend-production.up.railway.app/api/updatelicense/" + id, {
     method: "PUT",
     headers: {
       "Content-type": "application/json"
